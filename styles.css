@@ -1,0 +1,451 @@
+:root {
+    --purple-main: #6750a4;
+    --purple-light: #e8def8;
+    --dark-text: #1d1b20;
+    --gray-border: #79747e;
+    --bg-light: #fef7ff;
+    --cancel-red: #ba1a1a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f6f6f6;
+    color: var(--dark-text);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- ESTILOS PANTALLA LOGIN --- */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #49454f;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--gray-border);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn-signin {
+    width: 100%;
+    background-color: #2b2b2b;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.btn-signin:hover {
+    background-color: #1a1a1a;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #49454f;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+
+/* --- ENTORNO APLICATIVO WEB PRINCIPAL --- */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.browser-header {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    gap: 15px;
+}
+
+.browser-search {
+    background-color: #f1f3f4;
+    padding: 6px 20px;
+    border-radius: 20px;
+    flex-grow: 1;
+    max-width: 600px;
+    font-size: 14px;
+    color: #666;
+}
+
+.user-avatar-top {
+    width: 32px;
+    height: 32px;
+    background-color: #8a72ac;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.workspace {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+
+/* --- BARRA LATERAL (SIDEBAR) --- */
+.sidebar {
+    width: 200px;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #a3e2c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #2e7d32;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 12px 5px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    color: #49454f;
+    text-align: center;
+    gap: 5px;
+    transition: all 0.2s;
+}
+
+.nav-btn i {
+    font-size: 18px;
+}
+
+.nav-btn.active {
+    background-color: var(--purple-light);
+    color: #21005d;
+}
+
+.nav-btn.logout {
+    margin-top: 40px;
+    color: var(--cancel-red);
+}
+
+
+/* --- ÁREA DE CONTENIDO DINÁMICO --- */
+.content-area {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+/* VISTA: Inicio Dashboard */
+.welcome-card {
+    display: flex;
+    gap: 30px;
+    background-color: #fff;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.welcome-image {
+    background-color: #00bfa5;
+    width: 240px;
+    height: 180px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.loan-badge {
+    background: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.welcome-text h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.pub-date {
+    font-size: 12px;
+    color: #757575;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.welcome-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #3c4043;
+    margin-bottom: 15px;
+}
+
+.btn-primary-purple {
+    background-color: var(--purple-main);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.credit-lines-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.credit-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.credit-icon-img {
+    width: 100px;
+    height: 70px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+}
+
+.credit-icon-img.purple { background-color: #e8f0fe; color: #1a73e8; }
+.credit-icon-img.home-icon { background-color: #f5f5f5; font-size: 2rem;}
+.credit-icon-img.health-icon { background-color: #e8f0fe; font-size: 1.5rem; }
+
+.credit-info {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.credit-info h4 { font-size: 18px; font-weight: normal; margin-bottom: 4px; }
+.credit-info p { font-size: 14px; color: #5f6368; }
+.time-stamp { font-size: 12px; color: #70757a; display: block; margin-top: 5px; }
+.arrow-go { margin-left: auto; color: #000; cursor: pointer; }
+
+
+/* VISTA: Requisitos (Maqueta Rosa/Morado) */
+.requisitos-header {
+    margin-bottom: 30px;
+}
+.requisitos-header h2 { text-transform: lowercase; font-size: 28px; font-weight: 500;}
+.requisitos-header .subtitle { color: var(--purple-main); text-decoration: underline;}
+
+.requisitos-box-container {
+    border: 2px solid #e11d84; /* Contenedor rosa de la maqueta */
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.req-card {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.req-icon i {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.req-body h4 { font-size: 20px; font-weight: bold; margin-bottom: 5px;}
+.req-body p { font-size: 14px; color: #5f6368; line-height: 1.5;}
+
+
+/* VISTA: Formulario */
+.form-title {
+    font-size: 18px;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(3, 15fr);
+    gap: 25px 40px;
+    max-width: 1000px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.form-field input, .form-field select {
+    padding: 10px 14px;
+    border: 1px solid #c4c4c4;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #fff;
+    height: 42px;
+}
+
+.date-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 10px;
+}
+
+.date-inputs input {
+    text-align: center;
+}
+
+.form-actions-row {
+    grid-column: span 3;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-cancel {
+    background-color: var(--cancel-red);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-send {
+    background-color: var(--purple-main);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Responsivo rápido */
+@media (max-width: 768px) {
+    .grid-form { grid-template-columns: 1fr; }
+    .form-actions-row { grid-column: span 1; }
+    .workspace { flex-direction: column; }
+    .sidebar { width: 100%; flex-direction: row; }
+    .menu-nav { flex-direction: row; overflow-x: auto; }
+}

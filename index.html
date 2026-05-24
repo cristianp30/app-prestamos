@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo de Préstamos - Empresa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="login-screen" class="auth-container">
+        <div class="login-card">
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Value" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Value" required>
+                </div>
+                <button type="submit" class="btn-signin">INGRESAR</button>
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            </form>
+        </div>
+    </div>
+
+    <div id="main-app" class="app-container hidden">
+        
+         <div class="workspace">
+            <aside class="sidebar">
+                <div class="profile-section">
+                    <div class="avatar">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                </div>
+                
+                <nav class="menu-nav">
+                    <button class="nav-btn active" data-target="view-home">
+                        <i class="fa-solid fa-star"></i>
+                        <span>INICIO</span>
+                    </button>
+                    <button class="nav-btn" data-target="view-requisitos">
+                        <i class="fa-solid fa-star"></i>
+                        <span>REQUISITOS</span>
+                    </button>
+                    <button class="nav-btn" data-target="view-formulario">
+                        <i class="fa-solid fa-star"></i>
+                        <span>FORMULARIO PRESTAMO</span>
+                    </button>
+                    <button id="logout-btn" class="nav-btn logout">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>CERRAR SESIÓN</span>
+                    </button>
+                </nav>
+            </aside>
+
+            <main class="content-area">
+
+                <section id="view-home" class="app-view">
+                    <div class="welcome-card">
+                        <div class="welcome-image">
+                            <i class="fa-solid fa-file-invoice-dollar" style="font-size: 4rem; color: #fff;"></i>
+                            <div class="loan-badge">credito aprobado.</div>
+                        </div>
+                        <div class="welcome-text">
+                            <h2>REQUISITOS PRESTAMOS.</h2>
+                            <span class="pub-date">Tener en cuenta.</span>
+                            <p>¡Bienvenidos a la presentación de nuestro Programa de Créditos para Colaboradores! Nuestro objetivo hoy es mostrarles cómo la empresa se convierte en un aliado financiero para su hogar. A través de esta guía, conocerán las líneas de crédito disponibles (Libre Inversión, Vivienda, Educación y Salud) y los requisitos específicos para colaboradores directos y temporales. Queremos que el acceso a estos beneficios sea ágil, transparente y un verdadero impulso para el bienestar de todos.</p>
+                            <button class="btn-primary-purple redirection-btn" data-target="view-requisitos">Ir a requisitos</button>
+                        </div>
+                    </div>
+
+                    <h3 class="section-title">Líneas de Crédito <i class="fa-solid fa-arrow-right"></i></h3>
+                    
+                    <div class="credit-lines-list">
+                        <div class="credit-item">
+                            <div class="credit-icon-img purple">Crédito Libre Inversión</div>
+                            <div class="credit-info">
+                                <h4>Libre inversión</h4>
+                                <p>¿Planeas solicitar un crédito de libre inversión? 💰<br>
+                                    Necesitas una antigüedad mínima de 6 meses (directos) o 3 meses (temporales). Los montos y tiempos de pago varían según tu perfil. Consulta todos los detalles en el menú de Requisitos a la izquierda.</p>
+                                <span class="time-stamp"><i class="fa-regular fa-clock"></i> Today • 23 min</span>
+                            </div>
+                            <i class="fa-solid fa-caret-right arrow-go"></i>
+                        </div>
+                        <div class="credit-item">
+                            <div class="credit-icon-img home-icon">🏠</div>
+                            <div class="credit-info">
+                                <h4>Vivienda</h4>
+                                <p>¿Planeas solicitar un crédito de vivienda? 💰<br>
+                                    Necesitas una antigüedad mínima de 24 meses (directos) o 24 meses (temporales). Los montos y tiempos de pago varían según tu perfil. Consulta todos los detalles en el menú de Requisitos a la izquierda.</p>
+                                <span class="time-stamp"><i class="fa-regular fa-clock"></i> Today • 23 min</span>
+                            </div>
+                            <i class="fa-solid fa-caret-right arrow-go"></i>
+                        </div>
+                        <div class="credit-item">
+                            <div class="credit-icon-img health-icon">💙💵</div>
+                            <div class="credit-info">
+                                <h4>Salud</h4>
+                                <p>¿Planeas solicitar un crédito de salud? 💰<br>
+                                    Necesitas una antigüedad mínima de 18 meses (directos) o 18 meses (temporales). Los montos y tiempos de pago varían según tu perfil. Consulta todos los detalles en el menú de Requisitos a la izquierda.</p>
+                                <span class="time-stamp"><i class="fa-regular fa-clock"></i> Today • 23 min</span>
+                            </div>
+                            <i class="fa-solid fa-caret-right arrow-go text-right"></i>
+                        </div>
+                    </div>
+                    <div class="credit-item">
+                            <div class="credit-icon-img health-icon"> 👩‍🎓 💵</div>
+                            <div class="credit-info">
+                                <h4>Educación</h4>
+                                <p>¿Planeas solicitar un crédito de educación? 💰<br>
+                                    Necesitas una antigüedad mínima de 12 meses (directos) o 12 meses (temporales). Los montos y tiempos de pago varían según tu perfil. Consulta todos los detalles en el menú de Requisitos a la izquierda.</p>
+                                <span class="time-stamp"><i class="fa-regular fa-clock"></i> Today • 23 min</span>
+                            </div>
+                            <i class="fa-solid fa-caret-right arrow-go text-right"></i>
+                        </div>
+                </section>
+
+                <section id="view-requisitos" class="app-view hidden">
+                    <div class="requisitos-header">
+                        <h2>requisitos prestamos</h2>
+                        <p class="subtitle">colaboradores directos y temporales</p>
+                    </div>
+                    
+                    <div class="requisitos-box-container">
+                        <div class="req-card">
+                            <div class="req-icon"><i>i</i></div>
+                            <div class="req-body">
+                                <h4>libre inversión.</h4>
+                                <p>Queremos acompañarte en tus proyectos personales y profesionales. <br>
+                                   Por eso, ponemos a tu disposición el credito de libre inversión. <br>
+                                   Los montos y la antigüedad requerida dependen de tu tipo de vinculación:<br>
+                                   Directos: Mínimo 6 meses de antigüedad. Monto: 1 salario mensual.<br>
+                                   Temporales: Mínimo 3 meses de antigüedad. Monto: 1 salario mensual.</p>
+                            </div>
+                        </div>
+                        <div class="req-card">
+                            <div class="req-icon"><i>i</i></div>
+                            <div class="req-body">
+                                <h4>vivienda.</h4>
+                                <p>Queremos acompañarte en tus proyectos personales y profesionales. <br>
+                                Por eso, ponemos a tu disposición el credito de vivienda, <br>
+                                Los montos y la antigüedad requerida dependen de tu tipo de vinculación:<br>
+                                Directos: Mínimo 24 meses de antigüedad. Monto: 3 salario mensual.<br>
+                                Temporales: Mínimo 24 meses de antigüedad. Monto: 3 salario mensual.</p>
+                            </div>
+                        </div>
+                        <div class="req-card">
+                            <div class="req-icon"><i>i</i></div>
+                            <div class="req-body">
+                                <h4>educación</h4>
+                                <p>Queremos acompañarte en tus proyectos personales y profesionales. <br>
+                                Por eso, ponemos a tu disposición el credito de educación, <br>
+                                Los montos y la antigüedad requerida dependen de tu tipo de vinculación:<br>
+                                Directos: Mínimo 18 meses de antigüedad. Monto: 2 salario mensual.<br>
+                                Temporales: Mínimo 18 meses de antigüedad. Monto: 2 salario mensual.</p>
+                            </div>
+                        </div>
+                        <div class="req-card">
+                            <div class="req-icon"><i>i</i></div>
+                            <div class="req-body">
+                                <h4>salud</h4>
+                                <p>Queremos acompañarte en tus proyectos personales y profesionales. <br>
+                                Por eso, ponemos a tu disposición el credito de salud, <br>
+                                Los montos y la antigüedad requerida dependen de tu tipo de vinculación:<br>
+                                Directos: Mínimo 18 meses de antigüedad. Monto: 1.5 salario mensual.<br>
+                                Temporales: Mínimo 18 meses de antigüedad. Monto: 1.5 salario mensual.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="view-formulario" class="app-view hidden">
+                    <h2 class="form-title">FORMULARIO SOLICITUD DE CREDITO.</h2>
+                    
+                    <form id="loan-application-form" class="grid-form">
+                        <div class="form-field">
+                            <label>NOMBRES</label>
+                            <input type="text" placeholder="Value" required>
+                        </div>
+                        <div class="form-field">
+                            <label>APELLIDOS.</label>
+                            <input type="text" placeholder="Value" required>
+                        </div>
+                        <div class="form-field">
+                            <label>FECHA DE INGRESO.</label>
+                            <div class="date-inputs">
+                                <input type="text" placeholder="DD" maxlength="2" required>
+                                <input type="text" placeholder="MM" maxlength="2" required>
+                                <input type="text" placeholder="YYYY" maxlength="4" required>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label>CUPO.</label>
+                            <input type="number" placeholder="Value" required>
+                        </div>
+                        <div class="form-field">
+                            <label>VALOR DEL CREDITO.</label>
+                            <input type="number" placeholder="Value" required>
+                        </div>
+                        <div class="form-field">
+                            <label>VALOR CUOTA.</label>
+                            <input type="number" placeholder="Value" required>
+                        </div>
+                        <div class="form-field">
+                            <label>TIPO DE CREDITO.</label>
+                            <select required>
+                                <option value="">Value</option>
+                                <option value="libre">Libre Inversión</option>
+                                <option value="vivienda">Vivienda</option>
+                                <option value="educacion">Educación</option>
+                                <option value="salud">Salud</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label>TIPO DE CREDITO. (Subtipo/Plazo)</label>
+                            <input type="text" placeholder="Value">
+                        </div>
+
+                        <div class="form-actions-row">
+                            <button type="button" class="btn-cancel" id="btn-cancel-form">CANCELAR</button>
+                            <button type="submit" class="btn-send">ENVIAR</button>
+                        </div>
+                    </form>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
